@@ -6,5 +6,5 @@
   failed_when: "xdebug_result.stderr or ('ERROR' in xdebug_result.stdout)"
 
 - name: Add XDebug config
-  template: src=xdebug.ini.tpl dest=/etc/php5/conf.d/30-xdebug-config.ini
+  template: src=xdebug.ini.tpl dest=/etc/php5/fpm/conf.d/30-xdebug-config.ini
   notify: restart php5-fpm
